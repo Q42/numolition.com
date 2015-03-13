@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Numolition</title>
+
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" type="image/png" href="icon.png" />
+    <link rel="shortcut icon" href="icon.png" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="apple-touch-icon-precomposed" href="icon.png"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="Stylesheet" type="text/css" href="css/style.css" />
+    <link rel="Stylesheet" type="text/css" href="css/story.css" />
+    <link rel="Stylesheet" type="text/css" href="css/pause.css" />
+    <link rel="Stylesheet" type="text/css" href="css/quests.css" />
+    <link rel="Stylesheet" type="text/css" href="css/settings.css" />
+    <link rel="Stylesheet" type="text/css" href="css/hand.css" />
+    <link rel="Stylesheet" type="text/css" href="css/levelselect.css" />
+    <link rel="Stylesheet" type="text/css" href="font/alterego.css" />
+  </head>
+  <body>
+    <div id="game">
+      <!--
+      <div id="comic-edge-top" class="comic-border"></div>
+      <div id="comic-edge-bottom" class="comic-border"></div>
+      -->
+      <div id="container">
+
+
+        <div id="title" class="screen">
+          <div class="bg"></div>
+        </div>
+
+
+        <div id="nav" class="screen show-levels">
+
+          <div id="swiper" data-swipe="true">
+          
+            <div id="modes" data-panels="true" data-swipe-pages="1">
+              <div class="obj mode-locked-sandbox"></div>
+              <div class="obj mode-locked-towers"></div>
+              <div class="obj settings" data-mode="settings" data-swipe="false"></div>
+              <div class="unlock-mode unlock-mode-sandbox"></div>
+              <div class="unlock-mode unlock-mode-towers"></div>
+              <div class="progress" data-swipe="tap">
+                <span class="starsachieved">0</span>
+              </div>
+            </div>
+
+            <div id="levels" data-swipe-pages="7">
+              <div id="levels-page-1" class="levels-page" data-panels="true">                
+                <div class="page-locked page-1"></div>
+                <div class="page-locked page-2"></div>
+                <div class="page-locked page-3"></div>
+                <div class="page-locked page-4"></div>
+                <div class="page-locked page-5"></div>
+                <div class="page-locked page-6"></div>
+                <div class="page-locked page-7"></div>
+                <div class="back" data-swipe="tap"></div>
+                <div class="next-page" data-swipe="tap"></div>
+                <div class="progress" data-swipe="tap">
+                  <span class="starsachieved">0</span>
+                </div>
+              </div>
+              <div id="levels-page-2" class="levels-page" data-panels="true">
+                <div class="back" data-swipe="tap"></div>
+                <div class="prev-page" data-swipe="tap"></div>
+                <div class="next-page" data-swipe="tap"></div>
+                <div class="progress" data-swipe="tap">
+                  <span class="starsachieved">0</span>
+                </div>
+              </div>
+              <div id="levels-page-3" class="levels-page" data-panels="true">
+                <div class="back" data-swipe="tap"></div>
+                <div class="prev-page" data-swipe="tap"></div>
+                <div class="next-page" data-swipe="tap"></div>
+                <div class="progress" data-swipe="tap">
+                  <span class="starsachieved">0</span>
+                </div>
+              </div>
+              <div id="levels-page-4" class="levels-page" data-panels="true">
+                <div class="back" data-swipe="tap"></div>
+                <div class="prev-page" data-swipe="tap"></div>
+                <div class="next-page" data-swipe="tap"></div>
+                <div class="progress" data-swipe="tap">
+                  <span class="starsachieved">0</span>
+                </div>
+              </div>
+              <div id="levels-page-5" class="levels-page" data-panels="true">
+                <div class="back" data-swipe="tap"></div>
+                <div class="prev-page" data-swipe="tap"></div>
+                <div class="next-page" data-swipe="tap"></div>
+                <div class="progress" data-swipe="tap">
+                  <span class="starsachieved">0</span>
+                </div>
+              </div>
+              <div id="levels-page-6" class="levels-page" data-panels="true">
+                <div class="back" data-swipe="tap"></div>
+                <div class="prev-page" data-swipe="tap"></div>
+                <div class="next-page" data-swipe="tap"></div>
+                <div class="progress" data-swipe="tap">
+                  <span class="starsachieved">0</span>
+                </div>
+              </div>
+              <div id="levels-page-7" class="levels-page" data-panels="true">
+                <div class="back" data-swipe="tap"></div>
+                <div class="prev-page" data-swipe="tap"></div>
+                <div class="progress" data-swipe="tap">
+                  <span class="starsachieved">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="towers" class="screen grey-back" data-panels="true" data-swipe-pages="1">
+              <div class="bg"></div>
+              <div class="back" data-swipe="tap"></div>
+              <div class="tower-locked tower-1"></div>
+              <div class="tower-locked tower-2"></div>
+              <div class="tower-locked tower-3"></div>
+              <div class="tower-locked tower-4"></div>
+              <div class="unlock-tower unlock-tower-1">
+                <div class="star obj"></div>
+                <span>20</span>
+              </div>
+              <div class="unlock-tower unlock-tower-2">
+                <div class="star obj"></div>
+                <span>20</span>
+              </div>
+              <div class="unlock-tower unlock-tower-3">
+                <div class="star obj"></div>
+                <span>20</span>
+              </div>
+              <div class="unlock-tower unlock-tower-4">
+                <div class="star obj"></div>
+                <span>20</span>
+              </div>
+              <div class="progress" data-swipe="tap">
+                <span class="starsachieved">0</span>
+              </div>
+            </div>
+            <div id="settings" class="screen" data-swipe-pages="2">
+              <div id="settings-screen" class="screen" data-panels="true">
+                <div class="bg"></div>
+                <div class="back" data-swipe="tap"></div>
+                <div id="language" class="obj">English</div>
+                <div id="settings-sound-panel" class="obj happy"></div>
+                <div id="settings-sound" class="obj sound-on"></div>
+                <div id="settings-music" class="obj music-on"></div>
+                <div id="credits" class="obj">
+                  <div id="credits-roll"></div>
+                </div>
+                <div id="credits-label" class="obj"></div>
+                <div id="language-flag" class="obj flag-EN"></div>
+                <div class="next-page" data-swipe="tap"></div>
+              </div>
+              <div id="quento" class="screen" data-panels="true">
+                <div id="othergame" class="obj">Try our other game... Quento!</div>
+                <div class="bg"></div>
+                <div class="comic-border"></div>
+                <div class="back" data-swipe="tap"></div>
+                <div class="prev-page" data-swipe="tap"></div>
+                <div id="quento-quotes" class="obj">
+                  <div class="quote">"Quento is a delight. It's different, it's challenging. Fantastic." <span class="source">- Cult of Mac</span>
+                  </div>
+                  <div class="quote">"An app you don't want to miss." <span class="source">- Mashable</span>
+                  </div>
+                  <div class="quote">"Quento does a great job of rewarding concentration and smart gameplay." <span class="source">- TUAW</span>
+                  </div>
+                  <div id="quentoplayers" class="quote lastquote">Over 250.000 players (and) counting...</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- the actual game takes place within #level -->
+        <div id="level" class="screen">          
+          <div id="comic-border"></div>
+          <div class="bg"></div>
+
+          <div class="progress" data-swipe="tap">
+            <span class="starsachieved">0</span>
+          </div>
+
+          <div class="levelhint obj"></div>
+          <div class="meanwhile"></div>
+          <div class="obj pause-toggle"><div class="obj tap-area"></div></div>
+          <div class="obj retry-toggle"><div class="obj tap-area"></div></div>
+
+          <!-- where all the level tiles go -->
+          <div id="tiles"></div>
+
+          <div id="quests-toggles">
+            <div id="star1" class="obj quests-toggle"></div>
+            <div id="star2" class="obj quests-toggle"></div>
+            <div id="star3" class="obj quests-toggle"></div>
+          </div>
+
+          <!-- character -->
+          <div class="obj character girl"></div>
+
+          <div id="hand"><div id="hand-icon"></div><div id="tile-hint"></div></div>
+
+          <!-- balloons for finished/hopeless levels -->
+          <div class="obj balloon retry-balloons">
+            <div class="obj icon-levels"><div class="tap-area" data-action="levels"></div></div>
+            <div class="obj icon-retry"><div class="tap-area" data-action="retry"></div></div>
+          </div>
+          <div class="obj balloon next-balloon">
+            <div class="obj icon-next"><div class="tap-area" data-action="forward"></div></div>
+          </div>
+
+          <!-- the editor -->
+          <div id="editor-overlay">
+            <div id="editor-tiles">
+              <div class="tile tile-1" data-value="1">1</div>
+              <div class="tile tile-2" data-value="2">2</div>
+              <div class="tile tile-3" data-value="3">3</div>
+              <div class="tile tile-4" data-value="4">4</div>
+              <div class="tile tile-5" data-value="5">5</div>
+              <div class="tile tile-6" data-value="6">6</div>
+              <div class="tile tile-7" data-value="7">7</div>
+              <div class="tile tile-8" data-value="8">8</div>
+              <div class="tile tile-9" data-value="9">9</div>
+              <div class="tile tile-wall" data-value="99"></div>
+              <div class="tile tile-2 challenge" data-value="?">?</div>
+            </div>
+          </div>
+
+          <!-- the pause screen -->
+          <div id="pause-screen">
+            <div id="pause-text">MEANWHILE...</div>
+            <div id="button1" class="obj icon-levels"></div>
+            <div id="button2" class="obj icon-retry"></div>
+            <div id="button3" class="obj icon-play"></div>
+            <div id="button4" class="obj icon-sound-on"></div>
+            <div id="button5" class="obj icon-music-on"></div>
+            <div id="tap-target-1" class="obj tap-target" data-action="back"></div>
+            <div id="tap-target-2" class="obj tap-target" data-action="retry"></div>
+            <div id="tap-target-3" class="obj tap-target" data-action="play"></div>
+            <div id="tap-target-4" class="obj tap-target" data-action="sound-on"></div>
+            <div id="tap-target-5" class="obj tap-target" data-action="music-on"></div>
+          </div>
+
+          <div id="quests-screen">
+            <div id="quests-title"></div>
+            <div class="visual"></div>
+            <div id="quests-caption-speech"></div>
+            <div id="quests-caption-objectives"></div>
+            <div id="quest-objectives"></div>
+          </div>
+
+          <!-- placeholder for the next level -->
+          <!--
+          <div id="next-level">
+            <div id="comic-border"></div>
+            <div class="obj pause-toggle"></div>
+            <div class="bg"></div>
+            <div class="meanwhile"></div>
+            <div class="levelhint obj"></div>
+            <div class="obj character girl hint no-transition"></div>
+          </div>
+          -->
+
+        </div>
+
+      </div>
+      <div id="loading"></div>
+    </div>
+    <script src="bw/bw.js"></script>
+    <script src="bw/bw.audio.js"></script>
+    <script src="bw/bw.audio.fragment.js"></script>
+    <script src="bw/bw.debug.js"></script>
+    <script src="bw/bw.effects.js"></script>
+    <script src="bw/bw.effects.sprite.js"></script>
+    <script src="bw/bw.storage.js"></script>
+    <script src="bw/bw.events.js"></script>
+
+    <script src="bw/web/bw.web.js"></script>
+    <script src="bw/web/bw.web.debug.js"></script>
+    <script src="bw/web/bw.web.audio.js"></script>
+    <script src="bw/web/bw.web.effects.js"></script>
+    <script src="bw/web/bw.web.storage.js"></script>
+    <script src="bw/web/bw.web.events.js"></script>
+
+    <script src="js/jq.mobi.min.js"></script>
+    <script src="js/levels.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/gameOptions.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/story.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/pause.js"></script>
+    <script src="js/hand.js"></script>
+    <script src="js/drawing.js"></script>
+    <script src="js/levelselect.js"></script>
+    <script src="js/quests.js"></script>
+    <script src="js/texts.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/preloadImages.js"></script>
+    <script src="js/debug.js"></script>
+
+  </body>
+</html>

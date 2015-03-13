@@ -1,0 +1,236 @@
+#levels, 
+#levels *, 
+#towers, 
+#towers *,
+#settings,
+#settings * {
+  -webkit-transform: translate3d(0,0,0); /* speed up initial swipes */
+}
+#nav.show-levels #levels,
+#nav.show-towers #towers,
+#nav.show-settings #settings {
+  left: 320px;
+}
+#nav.show-levels #towers,
+#nav.show-levels #settings,
+#nav.show-towers #levels,
+#nav.show-towers #settings,
+#nav.show-settings #levels,
+#nav.show-settings #towers {
+  left: 3200px;
+}
+#swiper {
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transition: all .2s;
+  width: 3200px; height: 480px;
+}
+#levels {
+  position: absolute;
+  left: 320px;
+  width: 3200px; height: 480px;
+}
+  .levels-page {
+    position: absolute;
+    width: 320px; height: 480px;
+    background: #fff no-repeat;
+    background-size: 100% auto;
+  }
+  #levels-page-1 {
+    background-image: url(../img/levelselect/levels-page-1.jpg);
+    left: 0px;
+  }
+  #levels-page-2 {
+    background-image: url(../img/levelselect/levels-page-2.jpg);
+    left: 320px;
+  }
+  #levels-page-3 {
+    background-image: url(../img/levelselect/levels-page-3.png);
+    left: 640px;
+  }
+  #levels-page-4 {
+    background-image: url(../img/levelselect/levels-page-4.png);
+    left: 960px;
+  }
+  #levels-page-5 {
+    background-image: url(../img/levelselect/levels-page-5.png);
+    left: 1280px;
+  }
+  #levels-page-6 {
+    background-image: url(../img/levelselect/levels-page-6.png);
+    left: 1600px;
+  }
+  #levels-page-7 {
+    background-image: url(../img/levelselect/levels-page-7.png);
+    left: 1920px;
+  }
+
+
+#levels-pages-nav {
+  position: absolute; left: 0; top: 0;
+}
+  #levels .back,
+  #settings .back {
+    position: absolute;
+    width: 71px; height: 50px;
+    background: url(../img/levelselect/back.png) no-repeat;
+    background-size: 100% auto;
+    z-index: 2;
+    top: 7px; left: 6px;
+  }
+  #levels .grey-back .back,
+  #towers.grey-back .back { 
+    background-image: url(../img/levelselect/back_grey.png);
+  }
+  #levels .prev-page,
+  #settings .prev-page {
+    position: absolute;
+    width: 71px; height: 50px;
+    background: url(../img/levelselect/prev.png) no-repeat;
+    background-size: 100% auto;
+    z-index: 2;
+    top: 420px; left: 2px;
+  }
+  #levels .grey-prev .prev-page { 
+    background-image: url(../img/levelselect/prev_grey.png);
+  }
+  #levels .next-page,
+  #settings .next-page {
+    position: absolute;
+    width: 71px; height: 50px;
+    background: url(../img/levelselect/next.png) no-repeat;
+    background-size: 100% auto;
+    z-index: 2;
+    top: 420px; left: 243px;
+  }
+  #levels .grey-next .next-page { 
+    background-image: url(../img/levelselect/next_grey.png);
+  }
+  .progress {
+    position: absolute;
+    width: 71px; height: 50px;
+    top: 7px; left: 244px;
+    text-align: center;
+    line-height: 39px;
+    font-size: 0;
+    background: url(../img/levelselect/progress.png) no-repeat;
+    background-size: 100% auto;
+    z-index: 10;
+    /*display: none;*/
+  }
+    .grey-progress .progress {
+      background-image: url(../img/levelselect/progress_grey.png);
+    }
+/*  html.quests-unlocked #levels .progress,*/
+    span.starsachieved {
+      display: inline-block;
+      font-size: 13px;
+      padding-left: 23px;
+      background-image: url(../img/quests/star.png);
+      background-size: 20px auto;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      line-height: 25px;
+      margin-left: 6px;
+    }
+    #level .progress {
+      top: 6px;
+      background-image: none;
+    }
+    #level span.starsachieved {
+      font-size: 16px;
+    }
+#towers {
+  left: 320px;
+}
+#towers .back {
+  position: absolute;
+  width: 71px; height: 50px;
+  background: url(../img/levelselect/back.png) no-repeat;
+  background-size: 100% auto;
+  z-index: 10;
+  top: 8px; left: 6px;
+}
+.stars {
+  position: absolute;  
+  width: 62px; height: 22px;  
+  text-align: center;
+  xbackground: rgba(0,0,0,.5);
+}
+  .quest-item {
+    display: inline-block;
+    width: 12px; height: 22px;
+    background: url(../img/quests/star_white.png) no-repeat;
+    background-size: 100% auto;
+    pointer-events: none;
+  }
+  .quest-item.completed {
+    background-image: url(../img/quests/star.png);
+  }
+
+.page-locked,
+.tower-locked {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  z-index: 2;
+  display: none;
+}
+.page-1 { width: 204px; height: 165px; background-image: url(../img/levelselect/page1/1.png); left: 7px; top: 8px; }
+.page-2 { width: 120px; height: 117px; background-image: url(../img/levelselect/page1/2.png); left: 200px; top: 0px; }
+.page-3 { width: 134px; height: 96px; background-image: url(../img/levelselect/page1/3.png); left: 178px; top: 98px; }
+.page-4 { width: 308px; height: 143px; background-image: url(../img/levelselect/page1/4.png); left: 4px; top: 164px; }
+.page-5 { width: 163px; height: 91px; background-image: url(../img/levelselect/page1/5.png); left: 7px; top: 301px; }
+.page-6 { width: 153px; height: 94px; background-image: url(../img/levelselect/page1/6.png); left: 7px; top: 375px; }
+.page-7 { width: 155px; height: 163px; background-image: url(../img/levelselect/page1/7.png); left: 157px; top: 306px;}
+
+.tower-1 { width: 172px; height: 209px; background-image: url(../img/towers/tower1_locked.png); left: 0px; top: 9px; }
+.tower-2 { width: 169px; height: 240px; background-image: url(../img/towers/tower2_locked.png); left: 151px; top: 3px; }
+.tower-3 { width: 175px; height: 281px; background-image: url(../img/towers/tower3_locked.png); left: 0px; top: 199px; }
+.tower-4 { width: 163px; height: 255px; background-image: url(../img/towers/tower4_locked.png); left: 157px; top: 225px; }
+
+.tower-score {
+  position: absolute;
+  width: 84px;
+  height: 99px;
+  background: url(../img/pause/bomb_lit.png) no-repeat;
+  margin: -54px 0 0 -50px;
+  background-size: 100% auto;
+  color: #fff;
+  text-align: center;
+  line-height: 122px;
+  padding-left: 27px;
+  font-size: 18px;
+  pointer-events: none;
+}
+.levelnr {
+  position: absolute;
+  color: #000;
+  font-size: 50px;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+.unlock-mode,
+.unlock-tower {
+  position: absolute;
+  z-index: 999;
+  width: 60px; height: 70px;
+  background: url(../img/quests/star.png) no-repeat center center;
+  background-size: 60px auto;
+  text-align: center;
+  font-size: 17px;
+  line-height: 77px;
+  color: #000;  
+}
+  .unlock-tower-1 { left: 66px; top: 66px; -xwebkit-animation: float 4s infinite -3s; }
+  .unlock-tower-2 { left: 213px; top: 71px; -xwebkit-animation: float 4s infinite -2s; }
+  .unlock-tower-3 { left: 55px; top: 297px; -xwebkit-animation: float 4s infinite -1s; }
+  .unlock-tower-4 { left: 219px; top: 303px; -xwebkit-animation: float 4s infinite 0s; }
+
+.unlock-mode-towers { left: 140px; top: 205px; }
+.unlock-mode-sandbox { left: 140px; top: 360px; }
+
+@-webkit-keyframes float {
+  0% {  -webkit-transform: translate(0, -2px);}
+  50% { -webkit-transform: translate(0, 2px);}
+  100% { -webkit-transform: translate(0px, -2px);}
+}

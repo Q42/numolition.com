@@ -1,0 +1,95 @@
+#level {
+}
+#pause-screen {
+  position: absolute;
+  width: 192px; height: 480px;
+  left: 328px;
+  background: url(../img/pause/pause_bg.jpg) no-repeat;
+  background-size: auto 100%;
+}
+#level {
+  -webkit-transition: all .15s ease-out;
+  -webkit-transform: translate(0,0);
+  -webkit-backface-visibility: hidden;
+}
+#level.speedupTransitions {
+}
+html.pause-screen-enabled body div#level {
+  -webkit-transform: translate(-200px, 0);
+}
+.pause-toggle {
+  height: 40px;
+  z-index: 10005;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+  .pause-toggle .tap-area {
+    top: -27px; left: -13px;
+    width: 90px; height: 80px;
+  }
+.retry-toggle {
+  height: 40px;
+  z-index: 10005;
+  background-repeat: no-repeat;
+  background-size: 100% auto;  
+  opacity: 1;
+}
+.retry-toggle.show {
+  opacity: 1;
+  -webkit-transition: opacity .3s ease-out .2s;
+}
+#button1 {
+  left: 88px; top: 77px;
+}
+#button2 {
+  left: 33px; top: 137px;
+}
+#button3 {
+  left: 30px; top: 210px;
+}
+#button4 {
+  left: 35px; top: 310px;
+}
+#button5 {
+  left: 110px; top: 374px;
+}
+#pause-text {
+  position: absolute;
+  color: #000;
+  top: 27px; left: 20px;
+  font-size: 19px;
+}
+.icon-levels {
+  width: 44px; height: 50px;
+  background-image: url(../img/pause/icon-levels.png);
+}
+.icon-sound-on {
+  width: 53px; height: 50px;
+  background-image: url(../img/pause/icon-sound-on.png);
+}
+.icon-sound-off {
+  width: 53px; height: 50px;
+  background-image: url(../img/pause/icon-sound-off.png?v2);
+}
+.icon-music-on {
+  width: 31px; height: 48px;
+  background-image: url(../img/pause/icon-music-on.png);
+}
+.icon-music-off {
+  width: 47px; height: 48px;
+  background-image: url(../img/pause/icon-music-off.png);
+}
+.icon-play {
+  width: 35px; height: 50px;
+  background-image: url(../img/pause/icon-play.png);
+}
+.icon-retry {
+  width: 57px; height: 48px;
+  background-image: url(../img/pause/icon-retry.png);
+}
+#tap-target-1 { left: 69px; top: 59px; width: 82px; height: 63px; }
+#tap-target-2 { left: 14px; top: 123px; width: 94px; height: 72px; }
+#tap-target-3 { left: 7px; top: 198px; width: 78px; height: 72px; }
+#tap-target-4 { left: 9px; top: 287px; width: 97px; height: 77px; }
+#tap-target-5 { left: 87px; top: 365px; width: 86px; height: 64px; }
+

@@ -1,0 +1,533 @@
+/* #Element styles
+================================================== */
+	body{
+		font-family: 'komika_displayregular';
+	}
+	h1,h2,h3,h4,h4,h5,h6 {
+		font-family: 'komika_displayregular';
+	}
+
+
+/* #General
+================================================== */
+
+	.center-text{
+		text-align: center;
+	}
+	.center-div{
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.drop-shadow{
+		-webkit-box-shadow: 	6px 6px 0px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 		6px 6px 0px rgba(0, 0, 0, 0.2);
+		box-shadow: 			6px 6px 0px rgba(0, 0, 0, 0.2);
+	}
+	.inner-shadow{
+		-webkit-box-shadow: inset 6px 6px 0px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow:    inset 6px 6px 0px rgba(0, 0, 0, 0.2);
+		box-shadow:         inset 6px 6px 0px rgba(0, 0, 0, 0.2);
+	}
+	.comic-border{
+		border-style: solid;
+		border-width: 4px;
+		border-color: black;
+	}
+	.comic-box{
+		background-color: white;
+		padding:15px;
+	}
+
+	.rotate-left{
+		-webkit-transform:rotateZ(-2deg);
+		-moz-transform:rotateZ(-2deg);
+		-ms-transform:rotateZ(-2deg);
+		transform:rotateZ(-2deg);
+	}
+	.rotate-left2{
+		-webkit-transform:rotateZ(-1deg);
+		-moz-transform:rotateZ(-1deg);
+		-ms-transform:rotateZ(-1deg);
+		transform:rotateZ(-1deg);
+	}
+
+	.rotate-right{
+		-webkit-transform:rotateZ(1deg);
+		-moz-transform:rotateZ(1deg);
+		-ms-transform:rotateZ(1deg);
+		transform:rotateZ(1deg);
+	}
+	.antialias{
+		backface-visibility:			hidden;
+		-webkit-backface-visibility:	hidden; /* Chrome and Safari */
+		-moz-backface-visibility:		hidden; /* Firefox */
+		-ms-backface-visibility:		hidden; /* Internet Explorer */
+	}
+	.pattern{
+		width:100%;
+		height:100%;
+		background-image: url('../images/raster.png');
+		position:absolute;
+		background-size:10px 10px;
+	}
+	.appstoreimg{
+		width:80%;
+		padding-top: 20px;
+		padding-bottom:10px;
+	}
+	.floatleft{
+		float:left;
+	}
+	.twothirdpress{
+		width:580px;
+		float:left;
+	}
+	.pressscreens{
+		width:100%;
+	}
+	.bottom-margin{
+		margin-bottom:10px;
+	}
+	.storeicon{
+		width:125px;
+		float:left;
+	}
+	.storeicon img{
+		height:60px;
+	}
+	.appstorebox{
+		position:relative;
+		left:-70px;
+		top:-27px;
+		width:460px;
+		float:left;
+	}
+
+.relfix{
+	position:relative;
+}
+
+
+/* #Page Styles
+================================================== */
+
+	#top-logo{
+		width:50%;
+		margin-top: 80px;
+		margin-left: 25px;
+	}
+	#top-container{
+		height: 330px;
+		top: -30px;
+		position: relative;
+	}
+	#aboutimage{
+		width:100%;
+		height:300px;
+		margin-bottom:20px;
+		overflow:hidden;
+		background-image: url('../images/numogif2.gif');
+		background-size: cover;
+	}
+	#aboutimage p{
+		background-color:white;
+		width:65%;
+		margin:5px;
+		padding:5px;
+	}
+	.background1-container{
+		position:absolute;
+		width:100%;
+		height:550px;
+		overflow:hidden;
+	}
+	.background1{
+		width: 120%;
+		height: 480px;
+		position: relative;
+		top: -160px;
+		left: -25px;
+		background-image:url('../images/bgblue.png');
+		overflow:hidden;
+		-webkit-backface-visibility: hidden;
+	}
+	#coverpic{
+		width:100%;
+		height:100%;
+		background-image: url('../images/coverpic.jpg');
+		background-size:cover;
+		background-position: center center;
+	}
+	#aniquetop{
+		width:300px;
+		height:400px;
+		background-image: url('../images/anique.png');
+		background-size:cover;
+		position:absolute;
+		z-index:1;
+		left:15%;
+		top:100px;
+	}
+	#coninetop{
+		width:300px;
+		height:400px;
+		background-size:cover;
+		background-image:url('../images/conine.png');
+		position:absolute;
+		z-index: 1;
+		left:53%;
+		top:100px;
+	}
+	.background2-container{
+		width:100%;
+		height:750px;
+		overflow:hidden;
+		margin-top: 35px;
+		position: absolute;
+		top: 760px;
+		z-index:-1;
+	}
+	.background2{
+		width: 120%;
+		height: 580px;
+		position: relative;
+		top: 18px;
+		left: -25px;
+		background-image:url('../images/skyblue.jpg');
+		background-size:cover;
+		background-position: center center;
+	}
+	#downloadbox{
+		margin-top:32px;
+		overflow:hidden;
+		margin-bottom:20px;
+		
+	}
+	#brickbg{
+		width:1290px;
+		height:888px;
+		position:absolute;
+		top:0;
+		z-index:-1;
+		background-image: url('../images/brickspattern.png');
+	}
+	.onethirdsmall{
+		width:258px;
+	}
+	#trailercontainer{
+		margin-top: -35px;
+		margin-bottom:30px;
+	}
+	#trailerframe{
+		width:98%;
+		height:500px;
+		margin-right:auto;
+		margin-left:auto;
+	}
+
+
+	.container .sixteen.columns {
+		width: 904px;
+	}
+
+	footer{
+		width:100%;
+		height:605px;
+		overflow:hidden;
+	}
+
+	#footerbg {
+		width: 120%;
+		height: 420px;
+		background-image: url('../images/skyblue.jpg');
+		background-size: cover;
+		background-position: center center;
+		margin-top: 30px;
+		left: -20px;
+		position: relative;
+		overflow:hidden;
+	}
+		#bossimg{
+		position:absolute;
+		width:390px;
+		height:434px;
+		z-index:1;
+		left:24%;
+		background-image:url('../images/boss.png');
+		background-size: 390px 434px;
+	}
+	#friendstitle{
+		z-index:4;
+		width:235px;
+		margin-left:35%;
+		position:relative;
+		margin-top:33px;
+	}
+	.friendbubble{
+		width:150px;
+		height:150px;
+		background-image:url('../images/bubble.png');
+		background-size: 100% 100%;
+		position:absolute;
+		z-index:5;
+	}
+	.facebookbubble{
+		left:31%;
+		margin-top:80px;
+		-webkit-transform:rotateZ(-5deg);
+		-webkit-backface-visibility:hidden;
+	}
+	.twitterbubble{
+		left:24%;
+		margin-top:150px;
+	}
+	.friendbubble img{
+		width:50%;
+		margin-top:45px;
+		margin-left:40px;
+	}
+	.numberblock{
+		width:100px;
+	}
+	#storebgwhite {
+		width: 522px;
+		position: relative;
+		height: 238px;
+		z-index: 1;
+		right: 132px;
+		top: 113px;
+	}
+	#aboutcontainer{
+		width:300px;
+	}
+	#q42about {
+		position: relative;
+		background-image: url('../images/42.jpg');
+		background-size: 100% 100%;
+		width: 300px;
+		height: 400px;
+		left: 310px;
+		margin-bottom: 10px;
+		top: 60px;
+	}
+	#abouttext{
+		width: 150px;
+		height: 22px;
+		margin: 7px;
+	}
+
+
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+		#q42about{
+			left:220px;
+		}
+		.background2-container{
+				top: 690px;
+		}
+		.onethirdsmall{
+		width:194px;
+		}
+		#aniquetop{
+			left:10%;
+		}
+		#trailerframe{
+			height:400px;
+		}
+		.background2{
+			height: 480px;
+		}
+		#bossimg{
+			left:10%;
+		}
+		.facebookbubble{
+			left:35%;
+			margin-top:80px;
+		}
+		.twitterbubble{
+			left:25%;
+			margin-top:150px;
+		}
+	}
+	@media only screen and (min-width: 1600px)  {
+		#aniquetop{
+		left:18%;
+	}
+
+	}
+
+	@media only screen and (min-width: 960px) and (max-width: 1260px) {
+		#bossimg{
+		left:18%;
+	}
+
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		#downloadbox{
+			margin-top: 78px;
+		}
+		.container .sixteen.columns {
+			width: 710px;
+		}
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		footer{
+			height:1010px;
+		}
+		#q42about{
+			margin-top:465px;
+			left:0;
+			top:0;
+		}
+		#storebgwhite {
+			width: 100%;
+			position: relative;
+			height: 344px;
+			z-index: 1;
+			right: 4.5%;
+			top: 334px;
+		}
+		.background2-container{
+				top: 580px;
+		}
+		#top-logo{
+			width:80%;
+			margin-top: 95px;
+		}
+		.onethirdsmall{
+			width:262px;
+		}
+			#aniquetop{
+			left:0;
+			width:220px;
+			top:150px;
+		}
+		#trailerframe {
+			height: 290px;
+		}
+		.background2{
+			height: 420px;
+		}
+		#bossimg{
+			left:20%;
+			margin-top:55px;
+			background-size: 100% 100%;
+
+		}
+		#friendstitle{
+			margin-left:14%;
+		}
+		.facebookbubble{
+			left:50%;
+			margin-top:80px;
+		}
+		.twitterbubble{
+			left:34%;
+			margin-top:150px;
+		}
+		.numberblock{
+		display:none;
+		}
+		#coninetop{
+			left: 55%;
+			width: 238px;
+			height: 329px;
+			top: 129px;
+		}
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		#top-logo{
+			width:90%;
+		}
+		.onethirdsmall{
+			width:380px;
+		}
+		.container .sixteen.columns{
+			width:380px;
+		}
+		.background2-container{
+				top: 570px;
+		}
+			.appstorebox{
+			width: 380px;
+			float: left;
+			margin-top: 32px;
+			left:0;
+		}
+
+
+
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		#bossimg{
+			left:1%;
+			width: 286px;
+			height: 339px;
+			margin-top:55px;
+
+		}
+			#top-logo{
+			width:90%;
+			margin-top: 120px;
+		}
+			.container .sixteen.columns{
+			width:260px;
+		}
+			.background2{
+			height: 395px;
+		}
+		#friendstitle{
+			margin-left:5%;
+		}
+		.facebookbubble{
+			left:42%;
+			margin-top:80px;
+		}
+		.twitterbubble{
+			left:18%;
+			margin-top:150px;
+		}
+		#q42about{
+			margin-top:390px;
+		}
+		footer{
+			height:940px;
+		}
+		.appstorebox{
+			width: 262px;
+			float: left;
+			margin-top: 33px;
+			left:0;
+		}
+
+
+
+	}
+
+
+/* #Font-Face
+================================================== */
+
+	@font-face {
+	    font-family: 'komika_displayregular';
+	    src: url('../fonts/Komika_display-webfont.eot');
+	    src: url('../fonts/Komika_display-webfont.eot?iefix') format('eot'),
+	         url('../fonts/Komika_display-webfont.woff') format('woff'),
+	         url('../fonts/Komika_display-webfont.ttf') format('truetype'),
+	         url('../fonts/Komika_display-webfont.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }

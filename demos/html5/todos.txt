@@ -1,0 +1,102 @@
+Bubblewrapp
+- bw: call all apis
+
+Numolish todo
+- android tap
+
+- vertraging op menu knop (uit pauze)
+
+- tutorial levels voor bommen
+- konijn bij sandbox
+- cue dat iets niet kan (mss een soort rubberband gedrag? Plus geluidje...)
+- dust (49x50 per frame, 4 frames)
+- pling bij ster omlaag
+- logisch doel bij sandbox
+- 50 good levels
+- quests per level
+
+wishes
+- robot font? text? bzzKgg
+- letters 1 voor 1
+- peek stars by swiping?
+- explosion particles
+- tap op huidig aantal stars = uitleg geven?
+
+ooit
+- friends ranking
+- ouya
+- delay op back-knop (zowel vanuit level/tower select als in pause-scherm)
+- delay als tower start
+- better hopeless checking (check possible movements, and combo's per move?)
+
+stats
+- tilesMoved
+- tilesExploded
+- bombsMade
+- bombsExploded
+- matchingTiles1,2...9
+- matchingBombs
+- starsGained
+- randomLevelsCompleted
+
+Ideas for later
+- store all stats
+- explosie eerst omhoog
+- share picture?
+- use bombs in levels
+- levels sharen via url
+- minus bomb, decreases with adjacent clears, explodes when zero or below
+- hit blocks with falling a > b, only then they will disappear
+- bubbles are minus, are light, float to top?
+- larger multiplication blocks? not 1 block but a specific amount (15 = 3 means 3 x 5, but 15 = 5 means 5 x 3)
+- game mode slowly falling blocks (tetris like), only allowed to change falling blocks -> once down, auto clear
+- game mode slowly rising one horizontal line of wall-tiles, while quickly playing regular game with regeneration without walls
+- game mode build a new building by combining higher than 10?
+
+
+Promo Video
+
+The team behind sarien.net ...
+
+	"Best 50 websites of 2013" - TIME Magazine
+	"Best free games you should play today" - TechRadar
+	"An amazing homage to classic Sierra adventure games" - TouchArcade
+
+	Wired - Engadget - Joystiq - Kotaku
+
+... and the critically acclaimed puzzle game Quento ...
+
+	"Quento is a delight. It’s different, it’s challenging. Fantastic." - Cult Of Mac
+	"An app you don't want to miss." - Mashable
+	"Quento does a great job of rewarding concentration and smart gameplay" - TUAW
+
+is proud to present its new puzzle game for all ages...
+
+NUMOLITION 
+
+	* Blow up stuff!
+	* Making math fun again for all ages
+	* Addicting unique puzzle concept
+	* Bonus challenges
+	* Unlockable game modes
+	* Built with HTML5
+
+	* Explosive soundtrack and effects
+	* Great comic-book art and visuals
+
+	* Mindbending levels designed by an 8-year old
+
+
+From unique Dutch developer Q42
+
+	"Greatest Place To Work, 2013"
+	"Google Partner Of the Year, 2012"
+
+Soon on iOS, Android, OUYA, Windows 8, Mac and Chrome...
+
+Q42 - happy place for nerds
+
+
+or nerds
+
+

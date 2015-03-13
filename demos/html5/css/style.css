@@ -1,0 +1,600 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  cursor: default;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.no-transition {
+  -webkit-transition: none !important;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: #fff;
+  padding: 0; margin: 0;
+  font-family: 'alterego_regular', Impact, sans-serif;
+  overflow: hidden;
+}
+b {
+  font-family: 'alterego_bold', Impact, sans-serif;
+}
+html.paused #container:after {
+  content: ' '; display: block; font-size: 0; line-height: 0;
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  z-index: 10000;
+  background: rgba(0,0,0,.6);
+}
+
+.obj {
+  position: absolute;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.button {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  background: #000;
+  z-index: 10030;
+}
+
+#game {
+  width: 320px; height: 480px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.screen {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+}
+
+
+
+.bg {
+  position: absolute;
+  left: 0; top: 0;
+  width: 320px; height: 480px;
+  background: url(../img/bgs/sky1.jpg) no-repeat;
+  background-size: 100%;
+  display: block !important;
+}
+#title .bg {
+  background-image: url(../img/cover.jpg);
+}
+/* for towers mode */
+#towers .bg {
+  background-image: url(../img/towers/towerselect.jpg);
+}
+#level {
+  display: none;
+}
+#level.mode-towers.level-1 .bg { background-image: url(../img/towers/bg_tower_1.jpg); left: 6px; top: 35px;}
+#level.mode-towers.level-2 .bg { background-image: url(../img/towers/bg_tower_2.jpg); left: 6px; top: 34px;}
+#level.mode-towers.level-3 .bg { background-image: url(../img/towers/bg_tower_3.jpg); left: 6px; top: -9px; }
+#level.mode-towers.level-4 .bg { background-image: url(../img/towers/bg_tower_4.jpg?v5); left: 6px; top: -9px;}
+
+#level.mode-levels.level-1 .bg,
+#level.mode-levels.level-2 .bg {
+  background-image: url(../img/bgs/testlab.jpg); left: 0px; top: -8px;  
+}
+#level.mode-levels.level-3 .bg,
+#level.mode-levels.level-4 .bg {
+  background-image: url(../img/bgs/testlab2.jpg); left: 0px; top: -8px;   
+}
+#level.mode-levels.level-5 .bg,
+#level.mode-levels.level-6 .bg {
+  background-image: url(../img/bgs/testlab3.jpg); left: 0px; top: -8px;   
+}
+#level.mode-levels.level-7 .bg,
+#level.mode-levels.level-8 .bg {
+  background-image: url(../img/bgs/testlab4.jpg); left: 0px; top: -8px;   
+}
+#level.mode-random .bg {
+  background-image: url(../img/bgs/testlab.jpg); left: 0px; top: -8px;   
+}
+#level.mode-random.random-1 .bg { background-image: url(../img/bgs/sky1.jpg); left: 0px; top: -8px; }
+#level.mode-random.random-2 .bg { background-image: url(../img/bgs/sky2.jpg); left: 0px; top: -8px; }
+#level.mode-random.random-3 .bg { background-image: url(../img/bgs/sky3.jpg); left: 0px; top: -8px; }
+#level.mode-random.random-4 .bg { background-image: url(../img/bgs/testlab.jpg); left: 0px; top: -8px; }
+#level.mode-random.random-5 .bg { background-image: url(../img/bgs/testlab2.jpg); left: 0px; top: -8px; }
+#level.mode-random.random-6 .bg { background-image: url(../img/bgs/testlab3.jpg); left: 0px; top: -8px; }
+#level.mode-random.random-7 .bg { background-image: url(../img/bgs/testlab4.jpg); left: 0px; top: -8px; }
+#level.mode-random.random-8 .bg { background-image: url(../img/bgs/testlab5.jpg); left: 0px; top: -8px; }
+
+#level.mode-levels #comic-border,
+#level.mode-random #comic-border {
+  background-image: url(../img/comic/comic-border-3.png);   
+}
+
+  #title #logo {
+    width: 249px; height: 158px;
+    background-image: url(../img/logo.png);
+    left: 50%; top: 20px;
+    margin-left: -125px;
+    z-index: 8;
+    -webkit-transition: all .7s ease-out .3s;
+  }
+    #title #logo.above-screen {
+      -webkit-transform: translateY(-200px);
+    }
+  #tap-to-play {
+    left: 50%; bottom: 21px;
+    margin-left: -64px;
+    height: 40px;
+    z-index: 10;
+    -webkit-transform: rotate(3deg);
+    -webkit-transition: all .7s ease-out .5s;
+  }
+    #tap-to-play.below-screen {
+      -webkit-transform: rotate(3deg) translateY(100px);
+    }
+
+  .retry {
+    left: 130px; top: 10px;
+    z-index: 10;
+    -webkit-transform: rotate(2deg);
+  }
+  .edit {
+    position: absolute;
+    left: 30%; bottom: 20px; height: 40px;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    -xwebkit-transform: rotate(-3deg);
+    text-transform: uppercase;
+  }
+  .next {
+    right: 10px; bottom: 10px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    -webkit-transition: all .7s ease-out .3s;
+    -webkit-transform: rotate(3deg) translateY(100px);
+  }
+    .next.show {
+      -webkit-transform: rotate(3deg);
+    }
+  .title {
+    position: absolute;
+    right: 10px; top: 20px;
+    font-size: 30px;
+    line-height: 30px;
+    -webkit-transform: rotate(3deg);
+  }
+#modes {
+  position: absolute;
+  width: 320px; height: 480px;
+  background: url(../img/modes/bg_modes.jpg) no-repeat;
+  background-size: 100% auto;
+}
+  .mode-locked-towers {
+    width: 311px; height: 195px;
+    background-image: url(../img/modes/towers_locked.png);
+    top: 150px; left: 2px;
+    z-index: 3;
+  }
+  .mode-locked-sandbox {
+    width: 306px; height: 166px;
+    background-image: url(../img/modes/sandbox_locked.png);
+    top: 296px; left: 7px;
+    z-index: 4;
+  }
+
+#modes .settings {
+  width: 80px;
+  height: 48px;
+  left: 241px;
+  bottom: 10px;
+  z-index: 4;
+}
+
+#tiles {
+  position: relative;
+  width: 300px;
+  position: absolute;
+  bottom: 14px; left: 50%;
+  font-size: 0; line-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+  #tiles:before {
+    content: ''; display: block; position: absolute;
+    width: 50px; height: 50px;
+    left: -49px; bottom: -2px;
+    background: url(../img/stellage1.png?v2) no-repeat;
+    background-size: 100% auto;
+  }
+  #tiles:after {
+    content: ''; display: block; position: absolute;
+    width: 50px; height: 50px;
+    right: -49px; bottom: -2px;
+    background: url(../img/stellage2.png?v2) no-repeat;
+    background-size: 100% auto;
+  }
+#tiles.show {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: opacity .3s ease-out;
+}
+.tile {
+  position: absolute;
+  text-align: center;
+  font-family: 'alterego_regular', Impact, sans-serif;
+  font-size: 32px;
+  color: #000;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index:2;
+  border: solid #000 2px;
+  -webkit-transform: translate(0,0);
+  -webkit-backface-visibility: hidden; /* drastically speedup fall animation on iphones */
+}
+.editing .tile {
+  margin: 0 2px 2px 0;
+}
+.editing .tile-0 {
+  border-color: transparent;
+}
+.tile-0 { background: rgba(255,255,255,.4); color: transparent;}
+
+#tiles .tile-1 { background-image: url(../img/tile__1.png?v6); }
+#tiles .tile-2 { background-image: url(../img/tile__2.png?v6); }
+#tiles .tile-3 { background-image: url(../img/tile__3.png?v6); }
+#tiles .tile-4 { background-image: url(../img/tile__4.png?v6); }
+#tiles .tile-5 { background-image: url(../img/tile__5.png?v6); }
+#tiles .tile-6 { background-image: url(../img/tile__6.png?v6); }
+#tiles .tile-7 { background-image: url(../img/tile__7.png?v6); }
+#tiles .tile-8 { background-image: url(../img/tile__8.png?v6); }
+#tiles .tile-9 { background-image: url(../img/tile__9.png?v6); }
+#tiles .tile[data-value="99"], .tile-wall { 
+  background-image: url(../img/tile__99_2.png?v2); font-size: 0; line-height: 0;}
+#tiles .tile[data-value="98"], .tile-wall { 
+  background-image: url(../img/tile__bomb.png?v2); font-size: 0; line-height: 0;
+}
+#tiles .tile[data-value="97"], .tile-rock { 
+  background-image: url(../img/tile__rock.png); font-size: 0; line-height: 0;
+}
+
+.tile.challenge {
+  opacity: .2;
+  -webkit-animation: challenge infinite 5s ease-in-out;
+}
+@-webkit-keyframes challenge {
+  0% { opacity: .2; }
+  50% { opacity: 1; }
+  100% { opacity: .2; }
+}
+
+.tile.moving {
+  z-index: 10;
+}
+
+/* used to contain explosion rings */
+.tile[data-value="boom"] {
+  background: transparent;
+  border: none;
+  font-size: 0; line-height: 0;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.tile.selected {
+  border: solid rgba(255,50,50,.8) 5px;
+}
+.tile.minus {
+  border-radius: 100px;
+}
+  /* the flare that lights up when combining tiles */
+  .tile .flare {
+    position: absolute;
+    left: -2px; top: -2px; right: -2px; bottom: -2px;
+    background: #fff;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .tile .flare.fade-out {
+    -webkit-transition: opacity .8s ease-out 0s;
+  }
+
+.tile.level.towersLevel {
+  margin: 0 40px 80px 45px;
+}
+
+/* highscore for an towers mode */
+.towersLevel .score:before {
+  content: 'score ' ;
+}
+.towersLevel .score {
+  position: absolute;
+  font-family: arial;
+  text-transform: uppercase;
+  top: 46px; left: -25px;
+  min-width: 100px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: normal;
+  background: #000;
+  color: #fff;
+  padding: 5px 20px;
+  white-space: nowrap;
+}
+.towersLevel .score[data-score="0"] {
+  display: none;
+}
+/* the lock */
+.locked.level:after {
+  content:''; position: absolute; display: block; font-size: 0;
+  left: 27px; top: 11px; width: 40px; height: 50px;
+  background: url(../img/lock.png) no-repeat;
+  background-size: 100% auto;
+  z-index: 10;
+}
+.locked .score {
+  display: none;
+}
+
+.coin {
+  background-image: url(../img/coin.png);
+  z-index: 99;
+}
+  .coin.collect {
+    -webkit-transition: -webkit-transform 2s ease-in .1s;
+    -webkit-transform: translateY(-600px);
+  }
+
+
+.levelhint {
+  position: absolute;
+  left: 5px; width: 314px; top: 100px;
+  z-index: 10009;
+  padding: 5px 10px;
+  font-family: 'alterego_regular';
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  border-top: solid #000 2px;
+  border-bottom: solid #000 2px;
+  border-left: solid #fff 2px;
+  border-right: solid #fff 2px;
+  -webkit-transform: rotate(-1deg);
+}
+  .levelhint.afterLevel {
+    top: auto;
+    bottom: -3px;
+    left: 10px;
+    border-bottom: solid #fff;  
+  }
+  .levelhint.afterQuest {
+    top: auto;
+    bottom: 71px;
+    left: 9px;
+    border-bottom: solid #fff;  
+  }
+.levelhint img {
+  width: 25px; height: 25px;
+  vertical-align: bottom;
+}
+.levelhint img.brickborder {
+  border: solid #000 2px;
+}
+#editor-overlay {
+  display: none;
+  position: absolute;
+  background: rgba(0,0,0,.8);
+  left: 5%; top: 60px; right: 5%; height: 100px;
+  border-radius: 10px;
+  z-index: 999;
+  padding: 10px;
+}
+#editor-tiles .tile {
+  width: 40px; height: 40px; line-height: 35px;
+  font-size: 20px;
+  position: relative;
+  float: left;
+  margin: 0 4px 4px 0;
+}
+
+.meanwhile {
+  position: absolute;
+  color: #000;
+  padding: 3px 8px;
+  top: 25px; left: -2px;
+  width: 123px; height: 45px;
+  font-family: 'alterego_regular';
+  background: url(../img/comic/comic-box2.png) no-repeat;
+  background-size: 100% auto;
+  font-size: 16px;
+  line-height: 42px;
+  padding-left: 14px;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 10001;
+  -webkit-backface-visibility: hidden; /* fixes popup of this element after closing pause screen */
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transition: opacity .3s ease-out;
+}
+.meanwhile span.bomb {
+  display: inline-block;
+  position: relative;
+  width: 36px;
+}
+.meanwhile span.bomb:after {
+  content:''; font-size: 0; line-height: 0;
+  position: absolute;
+  width: 30px; height: 33px;
+  background: url(../img/pause/bomb.png) no-repeat;
+  background-size: 29px auto;
+  left: 0; top: -20px;
+}
+
+.meanwhile.hide {
+  opacity: 0;
+}
+
+/*
+#comic-edge-top {
+  position: absolute;
+  width: 320px; height: 19px;
+  background: url(../img/comic/comictop.png) no-repeat;
+  background-size: 100% auto;
+  top: -3px; left: 0; z-index: 99999;
+  pointer-events: none;
+}
+
+#comic-edge-bottom {
+  position: absolute;
+  width: 320px; height: 193px;
+  background: url(../img/comic/comicbottom.png) no-repeat;
+  background-size: 100% auto;
+  bottom: -3px; left: 0; z-index: 99999;
+  pointer-events: none;
+}
+*/
+
+#comic-border,
+.comic-border {
+  position: absolute;
+  width: 330px; height: 490px;
+  background: url(../img/comic/comic-border-3.png) no-repeat;
+  background-size: 100%;
+  z-index: 10000;
+  pointer-events: none;
+  left: -2px;
+}
+.pause-toggle {
+  top: 5px; right: 22px;
+  width: 15px;
+  background-image: url(../img/pause/pause-icon.png);    
+}
+  .pause-toggle .tap-area {
+    top: -27px;
+    left: -13px;
+    width: 90px;
+    height: 80px;
+  }
+.meanwhile {
+  top: -2px;
+  left: -2px;
+  background: none;
+}
+  .meanwhile.hide {
+    opacity: 1;
+  }
+  .retry-toggle {
+    opacity: 1;
+    width: 36px;
+    left: 226px; top: 4px;
+    background-image: url(../img/pause/icon-retry.png);    
+  }
+  .retry-toggle .tap-area {
+    top: -31px;
+    left: -13px;
+    width: 57px;
+    height: 65px;
+  }
+
+#next-level {
+  display: none;
+  position: absolute;
+  width: 320px; height: 480px;
+  background: url(../img/comic/comic-border-1.png) no-repeat;
+  background-size: 100%;
+  z-index: 10001;
+  pointer-events: none;
+  left: 326px; top: 0;
+}
+html.goto-next-level #level {
+  -webkit-transform: translate3d(-326px, 0, 0);
+  -webkit-transition: all .6s ease-out;
+}
+
+.kapow {
+  width: 220px; height: 100px;
+  z-index: 99999;
+  margin: -60px 0 0 -110px;
+  display: none;
+  pointer-events: none;  
+  background-size: 100% auto;
+}
+.kapow-1 { background-image: url(../img/kapows/kapow.png); }
+.kapow-2 { background-image: url(../img/kapows/crash.png); }
+.kapow-3 { background-image: url(../img/kapows/badoom.png); }
+.kapow-4 { background-image: url(../img/kapows/wham.png); }
+
+#loading {
+  position: absolute;
+  width: 100%; height: 100%;
+  background: #fff;
+  z-index: 999999999;
+  opacity: 1;
+  top: -1000px;
+  pointer-events: none;
+}
+#loading.show {
+  top: 0px;
+}
+#loading.fade {
+  opacity: 0;  
+  -webkit-transition: opacity .5s ease-out .3s;
+}
+
+#starcount {
+  position: absolute;
+  font-size: 10px;
+  left: 152px; bottom: -2px;
+  z-index: 1000;
+}
+  #starcount span.separator {
+    color: #999;
+    font-size: 8px;
+    display: inline-block;
+    margin: 0 2px 0 1px;
+  }
+  #starcount .star {
+    position: absolute;
+    width: 11px; height: 20px;
+    background-image: url(../img/quests/star.png);
+    margin-left: -15px;
+    margin-top: -1px;
+  }
+
+
+/* the star progress inside a level, after each completed level */
+#level .progress {
+  z-index: 99999;
+  pointer-events: none;
+  left: 248px;
+  top: 18px;
+  opacity: 0;
+  -webkit-transition: .3s ease-out;
+}
+#level .progress.show {
+  opacity: 1;
+}

@@ -1,0 +1,138 @@
+#settings {
+  xdisplay: none;
+  xborder: solid red 10px;
+  width: 320px;
+  height: 480px;
+  left: 320px;
+}
+
+  #settings #settings-screen .bg {
+  	background-image: url(../img/settings/settingsbg.jpg);
+  }
+
+  #settings #settings-screen .back {
+    position: absolute;
+    width: 71px; height: 50px;
+    z-index: 2;
+    top: 8px; left: 5px;
+    xbackground: none;
+  }
+
+#settings-sound-panel {
+  width: 144px; height: 223px;
+  background-image: url(../img/settings/audio_sad.png);
+  left: 8px; top: 8px;
+}
+#settings-sound-panel.happy {
+  background-image: url(../img/settings/audio_happy.png);
+}
+  #settings-sound {
+    width: 39px;
+    height: 50px;
+    left: 22px;
+    top: 74px;
+    background-image: url(../img/pause/icon-sound-on.png);
+  }
+  #settings-sound.sound-off {
+    background-image: url(../img/pause/icon-sound-off.png);
+  }
+  #settings-music {
+    width: 50px;
+    height: 37px;
+    left: 97px;
+    top: 53px;
+    background-image: url(../img/pause/icon-music-on.png);
+    background-size: auto 100%;
+  }
+  #settings-music.music-off {
+    background-image: url(../img/pause/icon-music-off.png);
+  }
+#language {
+  left: 10px;
+  top: 248px;
+  font-size: 14px;
+  width: 145px;
+  text-align: center;
+}
+#credits {
+  left: 166px;
+  top: 11px;
+  width: 140px;
+  bottom: 14px;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 16px;
+  overflow: hidden;
+}
+#settings #credits-roll {
+  -webkit-transform: translateY(460px);  
+}
+#nav.show-settings #settings #credits-roll.roll {
+  -webkit-animation: roll 50s infinite linear;
+}
+@-webkit-keyframes roll {
+  from { -webkit-transform: translateY(460px); }
+  to { -webkit-transform: translateY(-750px); }
+}
+#credits-label {
+  width: 81px; height: 32px;
+  background-image: url(../img/settings/credits.png);
+  left: 148px; top: 14px;
+  z-index: 3;
+}
+
+#language-flag {
+  width: 87px; height: 91px;
+  left: 75px; top: 274px;
+}
+.flag-NL { background-image: url(../img/settings/flag_dutch.png); }
+.flag-EN { background-image: url(../img/settings/flag_english.png); }
+
+#quento {
+  position: absolute;
+  left: 320px;
+}
+  #quento .comic-border {
+    z-index: 2;
+    background-image: url(../img/comic/comic-border-3.png);
+  }
+  #settings #quento .back {
+    top: 40px; left: 2px;
+  }
+  #settings #quento .prev-page {
+    top: 419px;
+    left: 6px;    
+  }
+  #quento .bg { 
+    background-image: url(../img/settings/quento.png?v2);
+    left: 7px; top: -5px;
+  }
+#settings #settings-screen .next-page {
+  left: 238px; top: 420px;
+}
+#othergame {
+  width: 100%;
+  color: #000;
+  z-index: 5;
+  top: 12px; left: 7px;
+}
+#quento-quotes {
+  top: 325px;
+  width: 320px;
+  padding: 0 15px 0 25px;
+  color: #000;
+  font-size: 10px;
+}
+  .quote {
+    margin-bottom: 17px;
+  }
+    .lastquote {
+      padding: 10px 0 0 53px;
+      white-space: nowrap;
+    }
+  .source {
+    float: right;
+  }

@@ -1,0 +1,126 @@
+Upon starting the browser inside a WebView, the device should fill the following object in the window scope:
+
+  BubbleWrappInfo = {
+    isApp: true, // means BubbleWrapp is living inside a native wrapper
+    locale: 'en', // the shorthand language/locale string such as 'en' or 'nl'
+    hasBackButton: false, // set to true if the game or app can listen to a back press
+    storage: {} // place name value pairs of stored (through $bw.storage.set) data here immediately
+  };
+
+When BubbleWrapp changes the WebView url to bubblewrapp://ping it means new data is in the queue. 
+The device code should then call the following method (in the window scope):
+
+  $bw.getActions();
+
+It will return a contatinated string of JSONified objects, separated using '__bw__', for instance:
+
+'{"foo":"bar"}__bw__{"foo":"bar"}'
+
+Usually, a ping will happen immediately after sending a command so the getActions command will probably return only 1 action JSONified as a string.
+
+Commands have the following format:
+
+{
+  name: 'audio.play',
+  params: {
+    'name': 'explosion',
+    'volume': 0.75
+  }
+}
+
+As you can see, the action name contains a module name ('audio') and method name ('play'), but can be regarded as just one action, but this made it easier to structure and keep track of things.
+
+AUDIO
+
+name: 
+  audio.register
+params: 
+  name      = name of the audio fragment
+  filenName = relative path and fileName to an mp3 or wav
+  volume    = (optional, default 1) between 0 and 1
+  isMusic   = (optional, default false) boolean to indicate if this is a background music track or a (short) sound effect
+  loop      = (optional, default false) if the music should loop (only for when @isMusic is enabled)
+  channels  = (optional, 1 for music, 4 for sfx) how many times this sound can be played in parallel
+
+name:
+  audio.play
+params:
+  name = name of the effect
+  volume (optional, between 0 and 1)
+
+  >>Q: Can we use loop in play instead of register? (same as volume)
+
+name:
+  audio.stop
+params:
+  name = (optional, stop all if none provided, cannot be resumed after stopping)
+
+name:
+  audio.pause
+params:
+  name = (optional, pause all if none provived, can be resumed after pausing)
+
+name:
+  audio.resume
+params:
+  name = (optional, resume all if none provived)
+
+
+
+DEBUG
+
+name:
+  debug.log
+params:
+  arguments = array with stuff to log
+
+
+
+EFFECTS
+
+name:
+  effects.registerSprite
+params:
+  name
+  fileName
+  width
+  height
+  imageWidth
+  frameCount
+  interval
+
+
+  >>Q: why interval in sec and not in ms? (whole numbers)
+  >>Q: ? where is effects.playSprite (x,y, name, delay)
+
+
+EVENTS
+
+Device can call
+
+  $bw.events.trigger('shakeDevice')
+
+which is a fire and forget event. Or it can fire
+
+  $bw.events.trigger('backButtonPressed', [optional data object to pass]);
+
+which will return true if the app/game handled the back-press and the device should stop any progagation.
+If returned false, the device can do its default back action.
+
+
+STORAGE
+
+There is no getter call from javascript to the wrapper code, as all initial data is written into BubbleWrapInfo.storage 
+at the start, and from there on it'll only be kept in sync using storage.set and storage.clear.
+
+name:
+  storage.set
+params:
+  name: key to store a value with
+  value: the value to sture (duh-huh)
+
+name:
+  storage.clear
+params:
+  name: (optional) key of the value to clear (when none specified, all data should be cleared)
+

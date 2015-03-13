@@ -1,0 +1,96 @@
+.character {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  z-index: 1001;
+  pointer-events: none;
+  opacity: 0;
+  width: 405px; height: 285px;
+  left: -90px; bottom: 12px;
+  -webkit-transition: opacity .3s ease-out;
+  -webkit-backface-visibility: hidden;
+}
+.character.show {
+  opacity: 1;
+}
+.girl.hint {
+  background-image: url(../img/characters/girlhint.png);
+}
+.girl.smile {
+  background-image: url(../img/characters/girlsmile.png);
+}
+.girl.sad {
+  background-image: url(../img/characters/girlsad.png);
+}
+.guy.hint {
+  background-image: url(../img/characters/guyhint.png);
+  left: -18px; bottom: 8px;
+}
+.guy.smile {
+  background-image: url(../img/characters/guysmile.png);
+  left: -18px; bottom: 8px;
+}
+.robot.smile {
+  background-image: url(../img/characters/robotsmile.png);
+  width: 225px; height: 353px; left: -5px; top: 218px;
+}
+.robot.hint {
+  background-image: url(../img/characters/robothint.png);
+  width: 250px; height: 353px; left: -5px; top: 218px;
+}
+.robot.sad {
+  background-image: url(../img/characters/robotsad.png?v2);
+  width: 225px; height: 353px; left: -5px; top: 218px;
+}
+
+
+.retry-balloons {
+  left: 37px; top: 86px;
+  background-image: url(../img/characters/bubbles.png);
+  width: 200px; height: 200px;
+  z-index: 1002;
+}
+  .retry-balloons .icon-levels {
+    left: 30px; top: 91px;
+    width: 47px; height: 41px;
+  }
+  .retry-balloons .icon-retry {
+    left: 117px; top: 19px;
+    width: 58px; height: 46px;
+  }
+  .next-balloon .icon-next {
+    left: 21px; top: 24px;
+    width: 64px; height: 30px;
+    background-image: url(../img/pause/icon-next.png);
+  }
+
+/*.mode-towers .retry-balloons .icon-retry {
+  background-image: url(../img/pause/bomb_lit.png);
+  left: 90px; top: -24px; width: 87px; height: 108px;
+}*/
+
+.next-balloon {
+  left: 182px; top: 185px;
+  background-image: url(../img/characters/bubble.png);
+  width: 108px; height: 108px;
+  z-index: 1002;
+}
+.balloon .tap-area {
+  position: absolute;
+  width: 180%; height: 180%;
+  left: -40%; top: -40%;
+}
+.icon-levels .tap-area {
+  width: 200%; left: -50%;
+}
+.icon-next .tap-area {
+  width: 160%; left: -30%;
+  height: 240%; top: -70%;
+}
+#next-level .girl {
+  opacity: 1 !important;
+}
+.mode-towers.tutorial .next-balloon {
+  left: 206px;
+  top: 159px;
+}

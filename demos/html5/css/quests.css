@@ -1,0 +1,129 @@
+#quests-title {
+  position: absolute;
+  top: 4px; left: 0;
+  width: 320px;
+  text-align: center;
+  font-size: 22px;
+}
+#quests-toggles {
+  position: absolute;
+  width: 120px; height: 42px;
+  left: 100px;
+  top: 6px;
+  z-index: 10000;
+  font-size: 0;
+  text-align: center;
+  padding-top: 3px;
+  opacity: 0;
+}
+#quests-toggles.show {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: opacity .5s ease-out .5s;
+}
+  .quests-toggle {
+    position: relative;
+    width: 20px; height: 42px;
+    background-image: url(../img/quests/star_white.png);    
+    margin: 0 1px;
+    display: none;
+  }
+  .quests-toggle.completed {
+    background-image: url(../img/quests/star.png);
+  }
+
+.stars-1 #star1,
+.stars-2 #star1,
+.stars-2 #star2,
+.stars-3 #star1,
+.stars-3 #star2,
+.stars-3 #star3 { display: inline-block; }
+
+#quests-screen {
+  position: absolute;
+  width: 320px; height: 480px;
+  top: -480px;
+  background: #fff;
+}
+  #quests-screen .visual {
+    position: absolute;
+    width: 299px; height: 330px;
+    left: 12px; top: 48px;
+    background: url(../img/quests/quests-bg.jpg) no-repeat;
+    background-size: 100% auto;
+  }
+html.quest-screen-enabled #level {
+  -webkit-transform: translateY(480px);
+}
+  html.quest-screen-objectives-enabled #level {
+  -webkit-transform: translateY(79px);
+  -webkit-transition: all .5s ease-out;
+}
+
+#quest-objectives {
+  position: absolute;
+  left: 10px; bottom: 10px;
+  width: 300px; min-height: 48px;
+  text-align: center;
+  font-size: 0;
+  line-height: 48px;
+}
+.or {
+  display: inline-block;
+  height: 48px;
+  line-height: 52px;
+  font-size: 14px;
+  margin: 0 6px;
+}
+.quest-tile {
+  position: relative;
+  display: inline-block;
+  margin: 0 3px 8px 3px;
+  width: 48px; height: 48px;
+  background: no-repeat;
+  background-size: 100% auto;
+  border: solid #000 3px;
+  border-radius: 2px;
+  vertical-align: top;
+}
+.quest-tile-1 { background-image: url(../img/quests/tile_greyed_1.png); }
+.quest-tile-2 { background-image: url(../img/quests/tile_greyed_2.png); }
+.quest-tile-3 { background-image: url(../img/quests/tile_greyed_3.png); }
+.quest-tile-4 { background-image: url(../img/quests/tile_greyed_4.png); }
+.quest-tile-5 { background-image: url(../img/quests/tile_greyed_5.png); }
+.quest-tile-6 { background-image: url(../img/quests/tile_greyed_6.png); }
+.quest-tile-7 { background-image: url(../img/quests/tile_greyed_7.png); }
+.quest-tile-8 { background-image: url(../img/quests/tile_greyed_8.png); }
+.quest-tile-9 { background-image: url(../img/quests/tile_greyed_9.png); }
+
+.completed.quest-tile-1 { background-image: url(../img/tile__1.png); }
+.completed.quest-tile-2 { background-image: url(../img/tile__2.png); }
+.completed.quest-tile-3 { background-image: url(../img/tile__3.png); }
+.completed.quest-tile-4 { background-image: url(../img/tile__4.png); }
+.completed.quest-tile-5 { background-image: url(../img/tile__5.png); }
+.completed.quest-tile-6 { background-image: url(../img/tile__6.png); }
+.completed.quest-tile-7 { background-image: url(../img/tile__7.png); }
+.completed.quest-tile-8 { background-image: url(../img/tile__8.png); }
+.completed.quest-tile-9 { background-image: url(../img/tile__9.png); }
+
+/*.quest-tile.completed:after {
+  content:''; display:block; position: absolute;
+  width: 25px; height: 45px;
+  background: url(../img/quests/star.png) no-repeat;
+  background-size: 100% auto;
+  left: 27px; top: 26px;
+  z-index: 2;
+}
+*/
+#quests-caption-objectives {
+  position: absolute;
+  left: 27px; top: 382px;
+  font-size: 14px;
+}
+#quests-caption-speech {
+  position: absolute;
+  width: 175px;
+  left: 23px; top: 74px;
+  font-size: 14px;
+  text-align: center;
+}

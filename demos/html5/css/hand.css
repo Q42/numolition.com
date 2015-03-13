@@ -1,0 +1,33 @@
+#hand {
+  position: absolute;
+  top: 0; left: 0;
+  margin: 8px 0 0 22px;
+  z-index: 99999;
+  display: none;
+  pointer-events: none;
+}
+#hand-icon {
+  position: absolute;
+  width: 61px; height: 64px;
+  background: url(../img/hand.png) no-repeat;
+  background-size: 100% auto;
+  z-index: 2;
+  -webkit-transform-origin: 0 0;
+  -webkit-transition: all .2s ease-in-out;
+}
+#tile-hint {
+  position: absolute;
+  left: -22px; top: -22px;
+  width: 49px; height: 49px;
+  border: solid #fff 2px;
+  z-index: 1;
+  background: rgba(255,255,255,.2);
+  opacity: 0;
+  -webkit-transition: opacity .15s ease-in-out;
+}
+#hand.down.showDownTile #tile-hint {
+  opacity: 1;
+}
+#hand.down #hand-icon {
+  width: 50px;
+}
